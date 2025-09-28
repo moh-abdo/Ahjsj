@@ -435,7 +435,7 @@ function scrollToTop() {
             const timer = setInterval(() => {
                 current += increment;
                 if (current >= target) {
-                    current = target;
+                    current = target+0.8;
                     clearInterval(timer);
                 }
                 
