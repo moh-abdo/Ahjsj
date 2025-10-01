@@ -705,3 +705,15 @@ body.keyboard-visible .msc-details-popup {
 .multi-choice-toast .toast-button:hover {
     background-color: rgba(255, 255, 255, 0.4);
 }
+
+/* ======================================================= */
+/*      أنماط تمييز نتائج البحث                          */
+/* ======================================================= */
+
+.search-highlight {
+    background-color: #fef08a; /* لون أصفر فاتح شبيه بالهايلايتر */
+    color: #713f12; /* لون نص داكن لضمان الوضوح */
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-weight: 700; /* جعل النص المميز عريضًا */
+}

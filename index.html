@@ -54,35 +54,32 @@
     <!-- زر واتساب عائم محسن -->
     
     <!-- شريط التنقل المحسن -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo" data-aos="fade-right">
-                <div class="logo-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="logo-text">
-                    <h2>منصةالثقة</h2>
-                    <span> للخدمات الطلابية المتكاملة</span>
-                </div>
+    <!-- Header الجديد -->
+<header class="header" id="header">
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                منصة الثقة
             </div>
-            <ul class="nav-menu" data-aos="fade-left">
-                <li><a href="#home" class="nav-link active">الرئيسية</a></li>
-                <li><a href="#cardsContainer" class="nav-link">الخدمات</a></li>
-
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">الرئيسية</a></li>
+                <li><a href="#cardsContainer" class="nav-link">خدماتنا</a></li> <!-- تم تعديل الرابط ليتناسب مع مشروعك -->
                 <li><a href="#portfolio" class="nav-link">أعمالنا</a></li>
-
-                <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
+                <li><a href="#faq" class="nav-link">الأسئلة الشائعة</a></li> <!-- تم تعديل الرابط -->
+                <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
             </ul>
-           
-            <div class="hamburger">
+            
+            <div class="nav-toggle" id="nav-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
     </nav>
-    
-    
+</header>
+
     <!-- القسم الرئيسي المحسن -->
     <section id="home" class="hero">
         <div class="hero-background">
@@ -118,8 +115,8 @@
             </h1>
             
             <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
-                نقدم حلولاً أكاديمية شاملة ومتميزة للطلاب الجامعيين بجودة عالية وأسعار تنافسية 
-                فريق من الخبراء المتخصصين يضمن لك التفوق الأكاديمي.
+                نقدم خدمات أكاديمية ومهنية متميزة تشمل شرح التكاليف والمشاريع الفصلية والكتابة الأكاديمية والبحثية، التحليل المالي والاحصائي ودراسات الأعمال, 
+                    ، التصميم الجرافيكي والعروض التقديمية،وخدمات السير الذاتية وتقارير التدريب والاستشارات الطلابية.
             </p>
             <div class="main-search-container">
         <i class="fas fa-search search-icon"></i>
@@ -476,7 +473,59 @@
 
         
     
-                
+                <!-- ======================================================= -->
+<!-- ============== بداية قسم كيف نعمل (الجديد) ============== -->
+<!-- ======================================================= -->
+<section id="how-it-works" class="how-it-works">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">كيف نعمل</h2>
+            <p class="section-description">
+                عملية بسيطة ومنظمة تضمن لك الحصول على أفضل النتائج في الوقت المحدد
+            </p>
+        </div>
+        
+        <div class="steps-container">
+            <div class="timeline"></div>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>التواصل الأولي</h3>
+                    <p>تواصل معنا عبر الهاتف أو البريد الإلكتروني أو نموذج التواصل. سنناقش معك متطلباتك بالتفصيل ونقدم لك استشارة مجانية لفهم احتياجاتك بدقة.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>تحليل المتطلبات</h3>
+                    <p>نقوم بتحليل مشروعك بعناية ونحدد النطاق والمتطلبات والجدول الزمني. نعد لك عرض سعر مفصل يشمل جميع جوانب المشروع مع ضمان الشفافية الكاملة.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>التنفيذ والمتابعة</h3>
+                    <p>بعد الموافقة، يبدأ فريقنا المتخصص في تنفيذ مشروعك بأعلى معايير الجودة. نوافيك بتقارير دورية عن التقدم ونتأكد من سير العمل وفقاً للخطة المتفق عليها.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>التسليم والمراجعة</h3>
+                    <p>نسلمك المشروع مكتملاً في الموعد المحدد مع إمكانية المراجعة والتعديل. نقدم دعماً مستمراً بعد التسليم لضمان رضاك التام عن النتيجة النهائية.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======================================================= -->
+<!-- =============== نهاية قسم كيف نعمل (الجديد) =============== -->
+<!-- ======================================================= -->
+
                
           <section class="features-section">
         <div class="container">
@@ -612,109 +661,53 @@
     </section>
          
        
-<section id="contact" class="contact-section"    style="padding: 100px 0; text-align: center; background: #fffff;">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-envelope"></i>
-                    تواصل معنا
-                </div>
-                <h2 class="section-title">نحن هنا لمساعدتك</h2>
-                <p class="section-description">
-                    تواصل معنا الآن للحصول على استشارة مجانية وابدأ رحلتك نحو التميز الأكاديمي والمهني
-                </p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-card animate-fade-in-left">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>واتساب</h4>
-                            <p>تواصل معنا عبر واتساب للحصول على رد سريع</p>
-                            <a href="https://wa.me/966549225740" class="btn btn-accent">
-                                <i class="fab fa-whatsapp"></i>
-                                إرسال رسالة
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="contact-card animate-fade-in-left">
-                        <div class="contact-icon">
-                            <i class="fab fa-telegram"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>تليجرام</h4>
-                            <p>راسلنا عبر تليجرام</p>
-                            <a href="https://t.me/+trYc237bMvwxNGU0" class="btn btn-accent">
-                                <i class="fab fa-telegram"></i>
-                                إرسال رسالة
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="contact-card animate-fade-in-left">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>ساعات العمل</h4>
-                            <p>نحن متاحون على مدار الساعة</p>
-                            <span class="availability-badge">24/7</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form-container animate-fade-in-right">
-                    <form class="contact-form" onsubmit="submitForm(event)">
-                        <div class="form-group">
-                            <label class="form-label">الاسم الكامل</label>
-                            <input type="text" class="form-input" name="name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">البريد الإلكتروني</label>
-                            <input type="email" class="form-input" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">رقم الهاتف</label>
-                            <input type="tel" class="form-input" name="phone" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">نوع الخدمة</label>
-                            <select class="form-input" name="service" required>
-                                <option value="">اختر نوع الخدمة</option>
-                                <option value="academic">الأبحاث والكتابة الأكاديمية</option>
-                                <option value="statistics">الإحصاء والبيانات</option>
-                                <option value="business">خدمات الأعمال</option>
-                            
-                                <option value="design">التصميم والعروض</option>
-                                <option value="professional">التطوير المهني</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">تفاصيل الخدمة</label>
-                            <textarea class="form-input" name="message" rows="4" placeholder="اكتب تفاصيل الخدمه هنا..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary form-submit">
-                            <i class="fas fa-paper-plane"></i>
-                            إرسال الطلب
-                        </button>
-                    </form>
-                </div>
-            </div>
+<!-- ======================================================= -->
+<!-- ============== بداية قسم الاتصال الجديد ============== -->
+<!-- ======================================================= -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">تواصل معنا</h2>
+            <p class="section-description">
+                نحن هنا لمساعدتك في تحقيق أهدافك. املأ النموذج التالي للتواصل معنا مباشرة عبر واتساب.
+            </p>
         </div>
         
-        </div>
-    </section>
-    
-                 </div>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">الاسم الكامل</label>
+                <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل">
+            </div>
+            
+            <div class="form-group">
+                <label for="service">نوع الخدمة</label>
+                <select id="service" name="service" required>
+                    <option value="">اختر نوع الخدمة</option>
+                    <option value="academic">الكتابة الأكاديمية والبحثية</option>
+                    <option value="business">التحليل المالي ودراسات الأعمال</option>
+                    <option value="tech">الحلول التقنية والبرمجية</option>
+                    <option value="design">التصميم الجرافيكي والعروض</option>
+                    <option value="career">التطوير المهني</option>
+                    <option value="consulting">الاستشارات والدعم الطلابي</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">تفاصيل المشروع</label>
+                <textarea id="message" name="message" rows="5" required placeholder="اكتب تفاصيل مشروعك ومتطلباتك"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+                <i class="fab fa-whatsapp"></i> <!-- تم تغيير الأيقونة لتناسب واتساب -->
+                إرسال عبر واتساب
+            </button>
+        </form>
+    </div>
+</section>
+<!-- ======================================================= -->
+<!-- =============== نهاية قسم الاتصال الجديد =============== -->
+<!-- ======================================================= -->
+
         
 <!-- ======================================================= -->
 <!-- =================== بداية قسم التذييل =================== -->

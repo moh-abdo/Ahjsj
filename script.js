@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         init() {
             this.buildCards();
             this.addGlobalEventListeners();
+            this.showWelcomeNotification();
         },
 
         // 4. بناء البطاقات من البيانات
@@ -346,6 +347,33 @@ card.querySelector('.card-whatsapp-link').href = `https://wa.me/966549225740?tex
             this.updateServiceItemUI(id);
         },
         // ... داخل كائن App
+// أضف هذه الدالة داخل كائن App
+showWelcomeNotification() {
+    // التحقق مما إذا كان الإشعار قد ظهر بالفعل في هذه الجلسة
+    if (sessionStorage.getItem('welcomeToastShown')) {
+        return; // إذا ظهر، لا تفعل شيئًا
+    }
+
+    // 1. تجهيز الرسالة مع استخدام وسوم HTML
+    const welcomeMessage = `
+        <div style="text-align: right; line-height: 1.6;">
+            <b>أهلاً وسهلاً، نورت المنصة! 🌟</b>  
+
+            نرجو التقييم والإعجاب بالخدمات، فهذا يفرق معنا.  
+
+            <small>ملاحظة): انقر على )"<b>عرض الخدمات</b>" في كل بطاقة لاستكشافها.</small>
+        </div>
+    `;
+
+    // 2. إظهار الإشعار لمدة طويلة (10 ثوانٍ)
+    // نستخدم setTimeout لتأخير ظهوره قليلاً بعد تحميل الصفحة
+    setTimeout(() => {
+        this.showToast(welcomeMessage, 10000); 
+    }, 2000); // سيظهر بعد ثانيتين من تحميل الصفحة
+
+    // 3. تسجيل أن الإشعار قد ظهر في هذه الجلسة
+    sessionStorage.setItem('welcomeToastShown', 'true');
+},
 
 // دالة البحث الرئيسية الجديدة
 // في ملف script.js
@@ -534,19 +562,23 @@ showMultiChoiceToast(message, buttons) {
                 this.closeMainModal();
             }
         },
-        showToast(message) {
-            const existing = document.querySelector('.toast');
-            if (existing) existing.remove();
-            const toast = document.createElement("div");
-            toast.className = "toast";
-            toast.textContent = message;
-            document.body.appendChild(toast);
-            setTimeout(() => toast.classList.add("show"), 50);
-            setTimeout(() => {
-                toast.classList.remove("show");
-                setTimeout(() => toast.remove(), 300);
-            }, 2500);
-        },
+        showToast(message, duration = 3000) { // 1. أضفنا مدة افتراضية
+    const existing = document.querySelector('.toast');
+    if (existing) existing.remove();
+
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.innerHTML = message; // 2. استخدمنا innerHTML بدلاً من textContent
+    document.body.appendChild(toast);
+
+    setTimeout(() => toast.classList.add("show"), 50);
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+        setTimeout(() => toast.remove(), 400);
+    }, duration); // 3. استخدمنا المدة المخصصة
+},
+
         showModalToast(message) {
             const container = this.elements.serviceModal.querySelector('.msc-details-popup-content');
             if (!container) return;
